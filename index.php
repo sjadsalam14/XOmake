@@ -1,6 +1,6 @@
 <?php
 
-define('BOT_TOKEN', '209787340:AAHHBhN3KdtaYwXyz3UxeyaphihkL2oT7cU');
+define('BOT_TOKEN', 'ضع توكنك هنا'); //paste your token here
 define('API_URL', 'https://api.telegram.org/bot'.BOT_TOKEN.'/');
 
 function apiRequestWebhook($method, $parameters) {
@@ -149,9 +149,9 @@ function processMessage($message) {
     $text = $message['text'];
 
     if (strpos($text, "/start") === 0) {
-      apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => "لبدأ 😊\nيجب على صديقك😻الضغط على زر العب☺️ [DEV EVO](t.me/dev_evo)","parse_mode"=>"MARKDOWN","disable_web_page_preview"=>"true",'reply_markup' => array(
+      apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => "لبدأ 😊\nيجب على صديقك😻الضغط على زر العب☺️ [programmer of iraq](t.me/programmer_iraq)","parse_mode"=>"MARKDOWN","disable_web_page_preview"=>"true",'reply_markup' => array(
             "inline_keyboard"=>array(
-			    array(array("text"=>"تابعنا","url"=>"t.me/dev_evo")),
+			    array(array("text"=>"تابعنا","url"=>"t.me/programmer_iraq")),
 			    array(array("text"=>"لعب ⭕️❌","switch_inline_query"=>md5(date("YMDms"))),array("text"=>"","callback_data"=>"m"))
 			)
 		)));
@@ -201,9 +201,9 @@ function callbackMessage($callback){
 				  }
 			  }
 			  $Tab[3][0]["text"]="تابع قناة البوت";
-			 $Tab[3][0]["url"]="t.me/dev_evo";
+			 $Tab[3][0]["url"]="t.me/programmer_iraq";
 			  
-			 apiRequest("editMessageText",array("inline_message_id"=>$message_id,"text"=>"لقد بدأت اللعبه \n\nأول لاعب😻 :$P1Name(❌)\n ثاني لاعب😍:$P2Name(⭕️)\n\n الان دورك  $P1Name(❌) صديقي☺ [تابع جديدنا على التليكرام](t.me/dev_evo)️","parse_mode"=>"MARKDOWN","disable_web_page_preview"=>"true","reply_markup"=>array(
+			 apiRequest("editMessageText",array("inline_message_id"=>$message_id,"text"=>"لقد بدأت اللعبه \n\nأول لاعب😻 :$P1Name(❌)\n ثاني لاعب😍:$P2Name(⭕️)\n\n الان دورك  $P1Name(❌) صديقي☺ [تابع جديدنا على التليكرام](t.me/programmer_iraq)️","parse_mode"=>"MARKDOWN","disable_web_page_preview"=>"true","reply_markup"=>array(
 			    "inline_keyboard"=>$Tab 
 			  )));
 			  exit;
@@ -335,7 +335,7 @@ function callbackMessage($callback){
 						}
 						
 					 $Tab[3][0]["text"]="تابع قناة البوت";
-			 $Tab[3][0]["url"]="t.me/dev_evo";
+			 $Tab[3][0]["url"]="t.me/programmer_iraq";
                         //apiRequest("sendMessage",array("chat_id"=>261203340,"text"=>json_encode($Tab)));						
 						//Tab
 						
